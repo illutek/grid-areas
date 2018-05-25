@@ -1,0 +1,137 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  --color-spring: #bcd979;
+  --color-olivine: #9dad6f;
+  --color-taupe: #7d6d61;
+  --color-wenge: #5e574d;
+  --color-columbia-bleu: #c3dfe0;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 10px;
+
+  grid-template-areas:
+    "header"
+    "nav"
+    "sidebar"
+    "content"
+    "footer";
+}
+
+@media only screen and (min-width: 480px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas:
+      "header nav"
+      "sidebar content"
+      "footer footer";
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+
+    grid-template-areas:
+      "header header nav"
+      "sidebar content content"
+      "footer footer footer";
+  }
+}
+
+.header,
+.navigation,
+.sidebar,
+.main-content,
+.footer {
+  padding: 20px;
+}
+
+.header {
+  grid-area: header;
+  min-height: 200px;
+  background: var(--color-spring);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation {
+  grid-area: nav;
+  background: var(--color-olivine);
+}
+
+.navigation__item {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 480px) {
+  .navigation__item {
+    display: block;
+  }
+}
+
+.navigation__items {
+  list-style-type: none;
+  display: block;
+
+  padding-top: 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .navigation__items {
+    padding-top: 10px;
+  }
+}
+
+.navigation__items a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  color: var(--color-white);
+
+  background: var(--color-taupe);
+}
+
+.sidebar span {
+  display: block;
+}
+
+.main-content {
+  grid-area: content;
+  background: var(--color-columbia-bleu);
+}
+
+.footer {
+  grid-area: footer;
+  background: var(--color-wenge);
+  color: var(--color-white);
+}
