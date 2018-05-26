@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+    font-size: 4vmax;
+}
+
 :root {
   --color-spring: #bcd979;
   --color-olivine: #9dad6f;
