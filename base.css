@@ -35,6 +35,11 @@ h1 {
   padding: 20px;
 }
 
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
 .header {
   min-height: 200px;
   background: var(--color-spring);
@@ -63,7 +68,6 @@ h1 {
 .navigation__items {
   list-style-type: none;
   display: block;
-
   padding-top: 0;
 }
 
@@ -72,7 +76,6 @@ h1 {
     padding-top: 10px;
   }
 }
-
 
 .navigation__items a {
   text-decoration: none;

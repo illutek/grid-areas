@@ -1,9 +1,6 @@
 /* Style.css = CSS-Grid*/
 
 .container {
-  width: 80vw;
-  margin: 0 auto;
-
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
@@ -13,8 +10,10 @@
     "header"
     "nav"
     "sidebar"
+    /* "footer" */
     "content"
-    "footer";
+    "footer"
+    ;
 }
 
 @media only screen and (min-width: 480px) {
@@ -37,7 +36,7 @@
     grid-template-areas:
       "header header nav"
       "sidebar content content"
-      "footer footer footer";
+      "sidebar footer footer";
   }
 }
 
@@ -47,11 +46,6 @@
 
 .navigation {
   grid-area: nav;
-}
-
-.navigation__item {
-  display: flex;
-  justify-content: space-around;
 }
 
 .sidebar {
