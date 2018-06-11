@@ -1,0 +1,91 @@
+/* Base.css */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 20px 0;
+}
+
+h1 {
+  font-size: 4vmax;
+}
+
+:root {
+  --color-spring: #bcd979;
+  --color-olivine: #9dad6f;
+  --color-taupe: #7d6d61;
+  --color-wenge: #5e574d;
+  --color-columbia-bleu: #c3dfe0;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+.header,
+.navigation,
+.sidebar,
+.main-content,
+.footer {
+  padding: 20px;
+}
+
+.header {
+  min-height: 200px;
+  background: var(--color-spring);
+
+  /* Title center with flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation {
+  background: var(--color-olivine);
+}
+
+@media only screen and (min-width: 480px) {
+  .navigation__item {
+    display: block;
+  }
+}
+
+.navigation__items {
+  list-style-type: none;
+  display: block;
+  padding-top: 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .navigation__items {
+    padding-top: 10px;
+  }
+}
+
+.navigation__items a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.sidebar {
+  color: var(--color-white);
+  background: var(--color-taupe);
+}
+
+.sidebar span {
+  display: block;
+}
+
+.main-content {
+  background: var(--color-columbia-bleu);
+}
+
+.footer {
+  background: var(--color-wenge);
+  color: var(--color-white);
+}
