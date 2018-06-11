@@ -49,6 +49,11 @@ h1 {
   background: var(--color-olivine);
 }
 
+.navigation__item {
+  display: flex;
+  justify-content: space-around;
+}
+
 @media only screen and (min-width: 480px) {
   .navigation__item {
     display: block;
@@ -58,6 +63,7 @@ h1 {
 .navigation__items {
   list-style-type: none;
   display: block;
+
   padding-top: 0;
 }
 
@@ -66,6 +72,7 @@ h1 {
     padding-top: 10px;
   }
 }
+
 
 .navigation__items a {
   text-decoration: none;
